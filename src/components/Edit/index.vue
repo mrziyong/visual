@@ -27,6 +27,7 @@ import Images from "@/components/Edit/Image"
 import Product from "@/components/Edit/Product"
 import Notice from "@/components/Edit/Notice"
 import Search from "@/components/Edit/Search"
+import Divider from "@/components/Edit/Divider"
 export default {
     name: 'EditForm',
     components: {
@@ -34,7 +35,8 @@ export default {
         Images,
         Product,
         Notice,
-        Search
+        Search,
+        Divider
     },
     props: {
         data: {
@@ -69,6 +71,10 @@ export default {
                 'search': {
                     tit: '搜索',
                     com: 'Search'
+                },
+                'divider': {
+                    tit: '分割线',
+                    com: 'Divider'
                 }
             },
             tabType: {

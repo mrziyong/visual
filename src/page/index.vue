@@ -81,6 +81,7 @@ import Images from '@/components/View/Images'
 import Banner from '@/components/View/Banner'
 import Notice from '@/components/View/Notice'
 import Search from '@/components/View/Search'
+import Divider from '@/components/View/Divider'
 export default {
     components: {
         EditForm,
@@ -89,7 +90,8 @@ export default {
         Images,
         Banner,
         Notice,
-        Search
+        Search,
+        Divider
     },
     data() {
         return {
@@ -118,6 +120,11 @@ export default {
                     name: '搜索',
                     icon: 'el-icon-search',
                     com: 'Search'
+                },
+                divider: {
+                    name: '分割线',
+                    icon: 'el-icon-minus',
+                    com: 'Divider'
                 }
             }, 
             view: [
