@@ -2,7 +2,7 @@
  * @Author: 秦自勇
  * @Date: 2021-08-14 11:26:03
  * @LastEditors: huangl
- * @LastEditTime: 2021-08-14 11:42:00
+ * @LastEditTime: 2021-08-16 15:46:25
  * @Description: 分割线组件
  * @FilePath: \Visualization-Page\src\components\Edit\Divider.vue
 -->
@@ -38,7 +38,5 @@ export default ({
 </script>
 
 <style scoped lang="scss">
-.divider-content {
-    
-}
+
 </style>

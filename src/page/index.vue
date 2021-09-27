@@ -82,6 +82,8 @@ import Banner from '@/components/View/Banner'
 import Notice from '@/components/View/Notice'
 import Search from '@/components/View/Search'
 import Divider from '@/components/View/Divider'
+import Seckilling from '@/components/View/Seckilling'
+import Blank from '@/components/View/Blank'
 export default {
     components: {
         EditForm,
@@ -91,7 +93,9 @@ export default {
         Banner,
         Notice,
         Search,
-        Divider
+        Divider,
+        Seckilling,
+        Blank
     },
     data() {
         return {
@@ -125,6 +129,16 @@ export default {
                     name: '分割线',
                     icon: 'el-icon-minus',
                     com: 'Divider'
+                },
+                seckilling: {
+                    name: '秒杀',
+                    icon: 'el-icon-alarm-clock',
+                    com: 'Seckilling'
+                },
+                blank: {
+                    name: '辅助空白',
+                    icon: 'el-icon-full-screen',
+                    com: 'Blank'
                 }
             }, 
             view: [
@@ -144,12 +158,6 @@ export default {
                 1: 'one',
                 2: 'two',
                 3: 'three'
-            },
-
-            Notice: {
-                title: '',
-                remarks: '',
-                backgroundColor: ''
             }
         }
     },
@@ -159,6 +167,7 @@ export default {
         }
     },
     methods: {
+        // 提交页面
         submit() {
             // JSON 转换会丢失 formData
             const form = JSON.parse(JSON.stringify(this.view))
@@ -170,10 +179,10 @@ export default {
             }
 
             for (let i of form) {
-                if (i.data && i.data.length == 0) {
-                    this.$message.error('请填写完整信息！')
-                    return
-                }
+                // if (i.data && i.data.length == 0) {
+                //     this.$message.error('请填写完整信息！')
+                //     return
+                // }
                 if (i.type === 'product') {
                     i.data = i.data.map(val => val.productId).join(',')
                 }

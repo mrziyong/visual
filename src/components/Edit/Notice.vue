@@ -2,7 +2,7 @@
  * @Author: 秦自勇
  * @Date: 2021-07-28 09:51:31
  * @LastEditors: huangl
- * @LastEditTime: 2021-07-28 11:06:09
+ * @LastEditTime: 2021-09-27 16:38:48
  * @Description: 公告组件控制栏
  * @FilePath: \Visualization-Page\src\components\Edit\Notice.vue
 -->
@@ -45,7 +45,6 @@ export default ({
         console.log('数据源', this.data)
         this.list = this.data
     }
-    
 })
 </script>
 

@@ -28,6 +28,8 @@ import Product from "@/components/Edit/Product"
 import Notice from "@/components/Edit/Notice"
 import Search from "@/components/Edit/Search"
 import Divider from "@/components/Edit/Divider"
+import Seckilling from "@/components/Edit/Seckilling"
+import Blank from "@/components/Edit/Blank"
 export default {
     name: 'EditForm',
     components: {
@@ -36,7 +38,9 @@ export default {
         Product,
         Notice,
         Search,
-        Divider
+        Divider,
+        Seckilling,
+        Blank
     },
     props: {
         data: {
@@ -75,6 +79,14 @@ export default {
                 'divider': {
                     tit: '分割线',
                     com: 'Divider'
+                },
+                'seckilling': {
+                    tit: '秒杀',
+                    com: 'Seckilling'
+                },
+                'blank': {
+                    tit: '辅助空白',
+                    com: 'Blank'
                 }
             },
             tabType: {
@@ -85,7 +97,6 @@ export default {
         }
     },
     mounted() {
-        console.log('头部', this.data   )
         this.type = this.data.type
         if (this.data.tabType) {
             this.tab(this.data.tabType)

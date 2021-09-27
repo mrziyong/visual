@@ -1,3 +1,12 @@
+<!--
+ * @Author: 秦自勇
+ * @Date: 2021-09-27 12:02:47
+ * @LastEditors: huangl
+ * @LastEditTime: 2021-09-27 17:17:10
+ * @Description: 限时秒杀
+ * @FilePath: \Visualization-Page\src\components\Edit\Seckilling.vue
+-->
+
 <template>
     <div class="product-content">
         <p class="tit">商品列表 <span>（可拖动排序）</span></p>
@@ -100,7 +109,7 @@ export default {
     },
     mounted() {
         this.list = this.data
-        
+        console.log('这里等于它的是：', this.data)
         if (!this.data.tabType) {
             this.$emit('changeTab', 2)
         }
@@ -259,4 +268,8 @@ var productList = [{
         }
     }
 }
+</style>
+</script>
+
+<style scoped lang="scss">
 </style>
