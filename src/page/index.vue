@@ -84,6 +84,7 @@ import Search from '@/components/View/Search'
 import Divider from '@/components/View/Divider'
 import Seckilling from '@/components/View/Seckilling'
 import Blank from '@/components/View/Blank'
+import Navigation from '@/components/View/Navigation'
 export default {
     components: {
         EditForm,
@@ -95,7 +96,8 @@ export default {
         Search,
         Divider,
         Seckilling,
-        Blank
+        Blank,
+        Navigation
     },
     data() {
         return {
@@ -139,6 +141,11 @@ export default {
                     name: '辅助空白',
                     icon: 'el-icon-full-screen',
                     com: 'Blank'
+                },
+                navigation: {
+                    name: '导航栏',
+                    icon: 'el-icon-menu',
+                    com: 'Navigation'
                 }
             }, 
             view: [

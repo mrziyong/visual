@@ -30,6 +30,7 @@ import Search from "@/components/Edit/Search"
 import Divider from "@/components/Edit/Divider"
 import Seckilling from "@/components/Edit/Seckilling"
 import Blank from "@/components/Edit/Blank"
+import Navigation from "@/components/Edit/Navigation"
 export default {
     name: 'EditForm',
     components: {
@@ -40,7 +41,8 @@ export default {
         Search,
         Divider,
         Seckilling,
-        Blank
+        Blank,
+        Navigation
     },
     props: {
         data: {
@@ -87,6 +89,10 @@ export default {
                 'blank': {
                     tit: '辅助空白',
                     com: 'Blank'
+                },
+                'navigation': {
+                    tit: '导航栏',
+                    com: 'Navigation'
                 }
             },
             tabType: {
